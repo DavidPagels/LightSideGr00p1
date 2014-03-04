@@ -1,0 +1,20 @@
+{
+  "name": "LightSideGr00p1",
+  "version": "0.0.0",
+  "authors": [
+    "DavidPagels <pagel093@morris.umn.edu>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "jquery": "~2.1.0",
+    "bootstrap": "~3.1.1"
+  }
+}
