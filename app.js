@@ -35,7 +35,8 @@ Module dependencies.
 
   app.set('partials', {
     mainPage: 'partials/mainPage',
-    scripts: 'partials/scripts'
+    scripts: 'partials/scripts',
+    navbar: 'partials/navbar'
   });
 
   app.set("port", process.env.PORT || 3000);
@@ -69,6 +70,10 @@ Module dependencies.
   }
 
   app.get("/", routes.index);
+
+  app.get("/results", routes.results);
+
+  app.get("/csvPage", routes.csvPage);
 
   app.get("/users", user.list);
 

@@ -18,7 +18,8 @@ db.once 'open', ->
 app.set 'layout', 'layouts/main'
 app.set 'partials',
   mainPage: 'partials/mainPage',
-  scripts: 'partials/scripts'
+  scripts: 'partials/scripts',
+  navbar: 'partials/navbar'
 
 # all environments
 app.set "port", process.env.PORT or 3000
@@ -39,6 +40,8 @@ app.use express.static(path.join(__dirname, 'bower_components'))
 app.use express.errorHandler()  if "development" is app.get("env")
 
 app.get "/", routes.index
+app.get "/results", routes.results
+app.get "/csvPage", routes.csvPage
 app.get "/users", user.list
 http.createServer(app).listen app.get("port"), ->
     console.log "Express server listening on port " + app.get("port")
