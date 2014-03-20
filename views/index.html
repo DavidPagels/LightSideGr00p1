@@ -5,33 +5,47 @@
     <p>{{ description }}</p></br></br>
 </div>
 <div class="row">
-    <div id="topLeftContents" class="col-md-6">
-        <h2>Sign Up</h2>
-        <button>Sign Up</button>
+
+
+    <div id="welcome" class="col-md-5">
+        <h2>Try Our Tools for In-Classroom Writing!
+            <br/>
+        <small>At LightSide, we’ve developed software that can instantly evaluate student writing – but scores aren’t enough.
+            In less than a second, we can grade an essay on multiple rubric scales and highlight the writer’s strongest
+            and weakest passages on each dimension. Independent research has repeatedly shown that if all you’re
+            interested in is a score, this technology is as accurate as human graders, and focuses on intuitive features
+            of writing like content mastery, stylistic syntax choices, and genre awareness.</small></h2>
+
+        <a href="http://lightsidelabs.com/why/" class="btn btn-success">More</a>
     </div>
 
-    <div id="topRightContents" class="col-md-6">
-        <h2>Sign in here!</h2>
-        <p>UserName:</p>
-        <input type="textArea" id="username">
-        <p>Password:</p>
+    <div id="try" class="col-md-5">
+        <h2>Try our sample model!</h2>
+        <p>Enter Essay</p>
+        <textarea id="essayContents"></textarea>
+        <p>Select Prepared Model</p>
+        <select>
+            <option selected="selected">...</option>
+            <option>Old Westerns</option>
+            <option>Modern Economics</option>
+            <option>World Leaders</option>
+        </select>
+        <button>Submit</button>
+
+    </div>
+
+    <div id="signIn" class="col-md-2">
+        <h3>Sign In <small>to begin creating your own unique and functional models.</small></h3>
+        <label>UserName:</label><br/>
+        <input type="textArea" id="username"><br/>
+        <label>Password:</label><br/>
         <input type="textArea" id="password"></br></br>
-        <button class="btn btn-success">Log In</button>
-        <p>Sign up now to try making your own model!</p>
+        <button class="btn btn-success">Log In</button><br/><br/>
+        <label>Are you a new user and would like to</label>
+        <button class="btn btn-success btn-xs">Sign Up</button>
     </div>
-</div>
 
-<div id="bottomContents">
-    <h2>Try a premade Model Here!</h2>
-    <p>Enter Essay</p>
-    <textarea id="essayContents" rows="10" cols="50"></textarea>
-    <p>Select Premade Model</p>
-    <select>
-        <option selected="selected">...</option>
-        <option>Old Westerns</option>
-        <option>Modern Economics</option>
-        <option>World Leaders</option>
-    </select>
-    <button>Submit</button>
+
 
 </div>
+
