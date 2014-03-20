@@ -18,7 +18,7 @@ function PostAnswer(newAnswer) {
         path: 'api/answers/',
         method: 'POST',
         headers: {
-            "Authorization": "Token ded435f184a304a4d1e3a87c3d9739fc6e2ba1bc", //fake token from Lightside API Reference
+            "Authorization": "Token ",
             "Content-Type": "application/json"
         }
     };
