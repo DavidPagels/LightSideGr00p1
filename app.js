@@ -5,17 +5,15 @@ Module dependencies.
  */
 
 (function() {
-  var app, db, express, http, mongoose, path, routes, user;
+  var app, db, express, http, mongoose, path, routes;
 
-  express = require("express");
+  express = require('express');
 
-  routes = require("./routes");
+  routes = require('./routes');
 
-  user = require("./routes/user");
+  http = require('http');
 
-  http = require("http");
-
-  path = require("path");
+  path = require('path');
 
   mongoose = require('mongoose');
 
@@ -35,7 +33,6 @@ Module dependencies.
 
   app.set('partials', {
     templates: 'partials/templates',
-    mainPage: 'partials/mainPage',
     scripts: 'partials/scripts',
     navbar: 'partials/navbar'
   });
@@ -67,11 +64,11 @@ Module dependencies.
 
   app.get("/", routes.index);
 
+  app.get("/results", routes.results);
 
-  /*app.get "/results", routes.results
-  app.get "/csvPage", routes.csvPage
-  app.get "/users", user.list
-   */
+  app.get("/csvPage", routes.csvPage);
+
+  app.get("/users", routes.list);
 
   http.createServer(app).listen(app.get("port"), function() {
     return console.log("Express server listening on port " + app.get("port"));

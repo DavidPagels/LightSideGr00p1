@@ -1,11 +1,10 @@
 ###
 Module dependencies.
 ###
-express = require("express")
-routes = require("./routes")
-user = require("./routes/user")
-http = require("http")
-path = require("path")
+express = require 'express'
+routes = require './routes'
+http = require 'http'
+path = require 'path'
 mongoose = require 'mongoose'
 app = express()
 
@@ -18,7 +17,6 @@ db.once 'open', ->
 app.set 'layout', 'layouts/main'
 app.set 'partials',
   templates: 'partials/templates',
-  mainPage: 'partials/mainPage',
   scripts: 'partials/scripts',
   navbar: 'partials/navbar'
 
@@ -45,9 +43,9 @@ app.configure 'development', ->
   app.use express.errorHandler()
 
 app.get "/", routes.index
-###app.get "/results", routes.results
+app.get "/results", routes.results
 app.get "/csvPage", routes.csvPage
-app.get "/users", user.list###
+app.get "/users", routes.list
 
 http.createServer(app).listen app.get("port"), ->
   console.log "Express server listening on port " + app.get("port")

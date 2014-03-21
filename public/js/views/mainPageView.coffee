@@ -1,4 +1,3 @@
-###
 class window.mainPageView extends Backbone.View
   tagName: 'div'
   template: _.template $('#logIn').html()
@@ -9,4 +8,4 @@ class window.mainPageView extends Backbone.View
 
   render: ->
     $('#content').html @template()
-    this###
+    this
