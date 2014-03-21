@@ -17,6 +17,7 @@
 
     AppRouter.prototype.index = function() {
       console.log("in index");
+      $('#content').append(new window.welcomeView().$el);
     };
 
     return AppRouter;

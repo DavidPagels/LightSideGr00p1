@@ -2,27 +2,27 @@
 (function() {
   exports.index = function(req, res) {
     res.locals = {
-      title: 'Try LightSide',
-      header: 'Try LightSide'
+      title: 'LightSide',
+      header: 'LightSide Main Page'
     };
     return res.render('index');
   };
 
-  exports.results = function(req, res) {
-    res.locals = {
-      title: 'Try LightSide',
-      header: 'Results'
-    };
-    return res.render('results');
-  };
 
-  exports.csvPage = function(req, res) {
+  /*exports.results = (req, res) ->
     res.locals = {
-      title: 'Try LightSide',
-      header: 'CSV Upload Page'
-    };
-    return res.render('csvPage');
-  };
+      title: 'LightSide',
+      header: 'LightSide Results Page'
+    }
+    res.render 'results'
+  
+  exports.csvPage = (req, res) ->
+    res.locals = {
+      title: 'LightSide',
+      header: 'LightSide CSV Upload Page'
+    }
+    res.render 'csvPage'
+   */
 
 }).call(this);
 

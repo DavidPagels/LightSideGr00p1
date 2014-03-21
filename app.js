@@ -34,54 +34,48 @@ Module dependencies.
   app.set('layout', 'layouts/main');
 
   app.set('partials', {
+    templates: 'partials/templates',
     mainPage: 'partials/mainPage',
     scripts: 'partials/scripts',
     navbar: 'partials/navbar'
   });
 
-  app.set("port", process.env.PORT || 3000);
-
-  app.set("views", path.join(__dirname, "views"));
-
   app.engine('html', require("hogan-express"));
 
-  app.set("view engine", "html");
+  app.enable('view cache');
 
-  app.use(express.favicon());
-
-  app.use(express.logger("dev"));
-
-  app.use(express.json());
-
-  app.use(express.urlencoded());
-
-  app.use(express.methodOverride());
-
-  app.use(express.cookieParser('your secret here'));
-
-  app.use(app.router);
+  app.configure(function() {
+    app.set("port", process.env.PORT || 3000);
+    app.set("views", __dirname + "/views");
+    app.set("view engine", "html");
+    app.use(express.favicon());
+    app.use(express.logger("dev"));
+    app.use(express.json());
+    app.use(express.urlencoded());
+    app.use(express.methodOverride());
+    app.use(express.cookieParser('your secret here'));
+    return app.use(app.router);
+  });
 
   app.use(express["static"](path.join(__dirname, "public")));
 
   app.use(express["static"](path.join(__dirname, 'bower_components')));
 
-  if ("development" === app.get("env")) {
-    app.use(express.errorHandler());
-  }
+  app.configure('development', function() {
+    return app.use(express.errorHandler());
+  });
 
   app.get("/", routes.index);
 
-  app.get("/results", routes.results);
 
-  app.get("/csvPage", routes.csvPage);
-
-  app.get("/users", user.list);
+  /*app.get "/results", routes.results
+  app.get "/csvPage", routes.csvPage
+  app.get "/users", user.list
+   */
 
   http.createServer(app).listen(app.get("port"), function() {
     return console.log("Express server listening on port " + app.get("port"));
   });
-
-  return;
 
 }).call(this);
 
