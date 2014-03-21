@@ -33,8 +33,8 @@ Module dependencies.
 
   app.set('partials', {
     templates: 'partials/templates',
-    scripts: 'partials/scripts',
-    navbar: 'partials/navbar'
+    navbar: 'partials/navbar',
+    scripts: 'partials/scripts'
   });
 
   app.engine('html', require("hogan-express"));

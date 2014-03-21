@@ -5,7 +5,7 @@ exports.index = (req, res) ->
   console.log 'inside index'
   res.locals = {
     title: 'LightSide',
-    header: 'LightSide Main Page'
+    header: 'LightSide Test Page'
   }
   res.render 'index'
 
@@ -15,14 +15,14 @@ exports.results = (req, res) ->
     title: 'LightSide',
     header: 'LightSide Results Page'
   }
-  res.render 'results'
+  res.render 'index'
 
 exports.csvPage = (req, res) ->
   res.locals = {
     title: 'LightSide',
     header: 'LightSide CSV Upload Page'
   }
-  res.render 'csvPage'
+  res.render 'index'
 
 exports.list = (req, res) ->
   res.send "respond with a resource"

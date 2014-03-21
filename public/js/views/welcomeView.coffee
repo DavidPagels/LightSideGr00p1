@@ -9,11 +9,11 @@ class window.welcomeView extends Backbone.View
     @render()
 
   render: ->
-    console.log 'adsfasdf'
+    console.log 'rendering welcome'
     $('#content').html @template()
     this
 
   submitEssay: ->
-    console.log 'in function'
+    console.log 'in function' #currently not firing
 #    console.log this.get 'essayContents'
     this

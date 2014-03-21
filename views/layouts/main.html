@@ -2,18 +2,18 @@
 
 <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css"/>
 <link rel="stylesheet" href="/stylesheets/style.css"/>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
 <html>
 <head>
     <title>{{ title }}</title>
+
 </head>
 <body>
-
 {{> navbar }}
-{{> templates }}
 <div>
     {{{ yield }}}
 </div>
+{{> templates }}
 {{> scripts }}
 </body>
 </html>

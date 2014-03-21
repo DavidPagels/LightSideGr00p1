@@ -4,7 +4,7 @@
     console.log('inside index');
     res.locals = {
       title: 'LightSide',
-      header: 'LightSide Main Page'
+      header: 'LightSide Test Page'
     };
     return res.render('index');
   };
@@ -15,7 +15,7 @@
       title: 'LightSide',
       header: 'LightSide Results Page'
     };
-    return res.render('results');
+    return res.render('index');
   };
 
   exports.csvPage = function(req, res) {
@@ -23,7 +23,7 @@
       title: 'LightSide',
       header: 'LightSide CSV Upload Page'
     };
-    return res.render('csvPage');
+    return res.render('index');
   };
 
   exports.list = function(req, res) {
