@@ -7,6 +7,7 @@ class window.welcomeView extends Backbone.View
 
   initialize: ->
     @render()
+    @submitEssay()
 
   render: ->
     console.log 'rendering welcome'

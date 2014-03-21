@@ -13,6 +13,7 @@
     "mongoose": "~3.8.8",
     "bootstrap": "0.0.2",
     "nodemon": "~1.0.15",
-    "chart": "~0.1.2"
+    "chart": "~0.1.2",
+    "request": "~2.34.0"
   }
 }

@@ -6,6 +6,7 @@ routes = require './routes'
 http = require 'http'
 path = require 'path'
 mongoose = require 'mongoose'
+lightSide = require './routes/lightSide'
 app = express()
 
 mongoose.connect 'mongodb://localhost/test'
@@ -46,6 +47,7 @@ app.get "/", routes.index
 app.get "/results", routes.results
 app.get "/csvPage", routes.csvPage
 app.get "/users", routes.list
+app.get "/lightSide", lightSide.callPost
 
 
 http.createServer(app).listen app.get("port"), ->
