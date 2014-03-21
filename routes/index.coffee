@@ -3,21 +3,21 @@
 #
 exports.index = (req, res) ->
     res.locals = {
-      title: 'LightSide',
-      header: 'LightSide Main Page'
+      title: 'Try LightSide',
+      header: 'Try LightSide'
     }
     res.render 'index'
 
 exports.results = (req, res) ->
   res.locals = {
-    title: 'LightSide',
-    header: 'LightSide Results Page'
+    title: 'Try LightSide',
+    header: 'Results'
   }
   res.render 'results'
 
 exports.csvPage = (req, res) ->
   res.locals = {
-    title: 'LightSide',
-    header: 'LightSide CSV Upload Page'
+    title: 'Try LightSide',
+    header: 'CSV Upload Page'
   }
   res.render 'csvPage'

@@ -2,24 +2,24 @@
 (function() {
   exports.index = function(req, res) {
     res.locals = {
-      title: 'LightSide',
-      header: 'LightSide Main Page'
+      title: 'Try LightSide',
+      header: 'Try LightSide'
     };
     return res.render('index');
   };
 
   exports.results = function(req, res) {
     res.locals = {
-      title: 'LightSide',
-      header: 'LightSide Results Page'
+      title: 'Try LightSide',
+      header: 'Results'
     };
     return res.render('results');
   };
 
   exports.csvPage = function(req, res) {
     res.locals = {
-      title: 'LightSide',
-      header: 'LightSide CSV Upload Page'
+      title: 'Try LightSide',
+      header: 'CSV Upload Page'
     };
     return res.render('csvPage');
   };
