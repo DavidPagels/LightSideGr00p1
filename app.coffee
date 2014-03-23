@@ -17,7 +17,9 @@ db.once 'open', ->
 
 app.set 'layout', 'layouts/main'
 app.set 'partials',
-  templates: 'partials/templates',
+  welcome: 'partials/welcome',
+  results: 'partials/results',
+  csv: 'partials/csv'
   navbar: 'partials/navbar',
   scripts: 'partials/scripts',
 
@@ -47,7 +49,7 @@ app.get "/", routes.index
 app.get "/results", routes.results
 app.get "/csvPage", routes.csvPage
 app.get "/users", routes.list
-app.get "/lightSide", lightSide.callPost
+app.post "/lightSide", routes.callGet
 
 
 http.createServer(app).listen app.get("port"), ->

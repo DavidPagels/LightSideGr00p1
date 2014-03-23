@@ -34,7 +34,9 @@ Module dependencies.
   app.set('layout', 'layouts/main');
 
   app.set('partials', {
-    templates: 'partials/templates',
+    welcome: 'partials/welcome',
+    results: 'partials/results',
+    csv: 'partials/csv',
     navbar: 'partials/navbar',
     scripts: 'partials/scripts'
   });
@@ -72,7 +74,7 @@ Module dependencies.
 
   app.get("/users", routes.list);
 
-  app.get("/lightSide", lightSide.callPost);
+  app.post("/lightSide", routes.callGet);
 
   http.createServer(app).listen(app.get("port"), function() {
     return console.log("Express server listening on port " + app.get("port"));

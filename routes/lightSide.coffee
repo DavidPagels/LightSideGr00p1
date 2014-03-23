@@ -1,15 +1,13 @@
 request = require 'request'
 
 exports.callGet: (req, res) ->
-  options = {
-    'url': 'https://try-api.lightsidelabs.com/api/',
-    method: 'get'
-    headers: {
+  request.post:
+    headers:{
       'Content-Type': 'application/json',
       'Authorization': 'YOUR TOKEN'
     }
-  }
-
-  request options, (error, response, body) ->
-    console.log body
-    res.send body
+    method: 'post'
+    url: 'https://try-api.lightsidelabs.com/api/'
+  , (error, response, body) ->
+     console.log body
+     return
