@@ -21,6 +21,14 @@ class window.welcomeView extends Backbone.View
     $('#sandboxResults').show(1000);
     console.log 'in function' #currently not firing
     console.log $('#essayContents').val()
+    postAnswer = new answer({answerText: $('#essayContents').val()})
+    console.log 'after new answer'
+    postAnswer.save {},
+      success: ->
+        console.log 'answer posted!'
+      error: ->
+        console.log 'answer denied!'
+
     this
 
   hideResults: ->

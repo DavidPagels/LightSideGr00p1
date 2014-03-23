@@ -19,9 +19,9 @@ app.set 'layout', 'layouts/main'
 app.set 'partials',
   welcome: 'partials/welcome',
   results: 'partials/results',
-  csv: 'partials/csv'
+  csv: 'partials/csv',
   navbar: 'partials/navbar',
-  scripts: 'partials/scripts',
+  scripts: 'partials/scripts'
 
 # all environments
 app.engine 'html', require ("hogan-express")
@@ -49,7 +49,7 @@ app.get "/", routes.index
 app.get "/results", routes.results
 app.get "/csvPage", routes.csvPage
 app.get "/users", routes.list
-app.post "/lightSide", routes.callGet
+app.post "/lightSide", lightSide.callGet
 
 
 http.createServer(app).listen app.get("port"), ->
