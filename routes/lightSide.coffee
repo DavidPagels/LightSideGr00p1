@@ -1,6 +1,6 @@
 request = require 'request'
 
-exports.callPost: (req, res) ->
+exports.callGet: (req, res) ->
   options = {
     'url': 'https://try-api.lightsidelabs.com/api/',
     method: 'get'
