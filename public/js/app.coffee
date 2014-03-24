@@ -5,6 +5,7 @@ class AppRouter extends Backbone.Router
     'csvPage': 'csvPage'
 
   index: ->
+
     console.log "in index"
     $('#content').html new window.welcomeView().$el
     return

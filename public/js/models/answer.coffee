@@ -1,5 +1,5 @@
 class window.answer extends Backbone.Model
-  urlRoot: '/lightSide'
+  urlRoot: '/postAnswer'
   initialize: ->
     console.log 'initializing an answer'
 

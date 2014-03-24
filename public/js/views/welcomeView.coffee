@@ -8,9 +8,8 @@ class window.welcomeView extends Backbone.View
 
 
   initialize: ->
+    new prompt().fetch()
     @render()
-    console.log @template()
-    #@submitEssay()
 
   render: ->
     console.log 'rendering welcome'

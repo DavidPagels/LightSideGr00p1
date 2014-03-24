@@ -74,7 +74,9 @@ Module dependencies.
 
   app.get("/users", routes.list);
 
-  app.post("/lightSide", lightSide.callGet);
+  app.get("/postAnswer", lightSide.postAnswer);
+
+  app.get("/getPrompt", lightSide.getPrompt);
 
   http.createServer(app).listen(app.get("port"), function() {
     return console.log("Express server listening on port " + app.get("port"));
