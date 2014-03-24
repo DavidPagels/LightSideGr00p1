@@ -1,4 +1,3 @@
-
 class window.prompt extends Backbone.Model
 
   defaults:
@@ -9,7 +8,7 @@ class window.prompt extends Backbone.Model
   sync: (method,model,options) ->
     $.ajaxSetup {
       headers:
-        Authorization: 'Token c35f045779a7564c55df0f7df7fedaf4346b3d40'
+        Authorization: 'Token aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' #dummy token
         'Content-Type': 'application/json'
       method: 'get'}
     Backbone.sync(method,model,options)
