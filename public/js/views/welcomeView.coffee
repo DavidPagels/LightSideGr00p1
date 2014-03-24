@@ -9,7 +9,6 @@ class window.welcomeView extends Backbone.View
 
   initialize: ->
     thePrompt = new prompt().fetch()
-    console.log thePrompt
     @render()
     return
 
