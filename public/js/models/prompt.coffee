@@ -1,7 +1,19 @@
 class window.prompt extends Backbone.Model
-  urlRoot: '/getPrompt'
-  initialize: ->
-    console.log 'getting a prompt'
+
 
   defaults:
-    thePrompt: 'asdfsd'
+    text: ''
+
+  urlRoot: 'https://try-api.lightsidelabs.com/api/prompts/3'
+
+  sync: (method,model,options) ->
+    $.ajaxSetup {
+      headers:
+        Authorization: 'Token ',
+        'Content-Type': 'application/json'
+      method: 'get'}
+    Backbone.sync(method,model,options);
+
+
+  parse: (response, options) ->
+    response

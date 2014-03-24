@@ -50,7 +50,6 @@ app.get "/results", routes.results
 app.get "/csvPage", routes.csvPage
 app.get "/users", routes.list
 app.get "/postAnswer", lightSide.postAnswer
-app.get "/getPrompt", lightSide.getPrompt
 
 
 http.createServer(app).listen app.get("port"), ->

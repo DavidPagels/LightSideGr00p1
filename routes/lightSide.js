@@ -11,7 +11,7 @@
       method: 'get',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Token c35f045779a7564c55df0f7df7fedaf4346b3d40'
+        'Authorization': 'Token '
       }
     };
     return requestLightSide(options, function(error, response, body) {
@@ -19,23 +19,4 @@
     });
   };
 
-  exports.getPrompt = function(req, res) {
-    var options;
-    options = {
-      url: 'https://try-api.lightsidelabs.com/api/prompts/3',
-      method: 'get',
-      headers: {
-        Authorization: 'Token c35f045779a7564c55df0f7df7fedaf4346b3d40',
-        'Content-Type': 'application/json'
-      }
-    };
-    return requestLightSide(options, function(error, response, body) {
-      res.render('partials/welcome', {
-        promptContents: JSON.parse(body).text
-      });
-    });
-  };
-
 }).call(this);
-
-//# sourceMappingURL=lightSide.map

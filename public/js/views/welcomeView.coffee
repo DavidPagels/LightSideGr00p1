@@ -8,11 +8,13 @@ class window.welcomeView extends Backbone.View
 
 
   initialize: ->
-    new prompt().fetch()
+    _.bindAll(this)
+    thePrompt = new prompt().fetch()
+    console.log thePrompt.get 'text'
     @render()
+    return
 
   render: ->
-    console.log 'rendering welcome'
     @$el.html @template()
     this
 
