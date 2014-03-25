@@ -3,24 +3,24 @@
     <properties>
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/public/js/models/prompt.js" />
-        <item url="file://$PROJECT_DIR$/public/js/app.js" />
-        <item url="file://$PROJECT_DIR$/routes/lightSide.js" />
-        <item url="file://$PROJECT_DIR$/app.js" />
-        <item url="file://$PROJECT_DIR$/public/js/views/welcomeView.js" />
         <item url="file://$PROJECT_DIR$/public/js/views/CSVView.js" />
-        <item url="file://$PROJECT_DIR$/routes/index.js" />
         <item url="file://$PROJECT_DIR$/public/js/views/resultsView.js" />
+        <item url="file://$PROJECT_DIR$/app.js" />
+        <item url="file://$PROJECT_DIR$/public/js/app.js" />
+        <item url="file://$PROJECT_DIR$/public/js/views/welcomeView.js" />
+        <item url="file://$PROJECT_DIR$/public/js/models/answer.js" />
+        <item url="file://$PROJECT_DIR$/routes/lightSide.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/public/js/app.js" />
       <root url="file://$PROJECT_DIR$/public/js/models/prompt.js" />
-      <root url="file://$PROJECT_DIR$/routes/lightSide.js" />
-      <root url="file://$PROJECT_DIR$/app.js" />
-      <root url="file://$PROJECT_DIR$/public/js/views/welcomeView.js" />
       <root url="file://$PROJECT_DIR$/public/js/views/CSVView.js" />
-      <root url="file://$PROJECT_DIR$/routes/index.js" />
+      <root url="file://$PROJECT_DIR$/app.js" />
       <root url="file://$PROJECT_DIR$/public/js/views/resultsView.js" />
+      <root url="file://$PROJECT_DIR$/public/js/app.js" />
+      <root url="file://$PROJECT_DIR$/public/js/views/welcomeView.js" />
+      <root url="file://$PROJECT_DIR$/public/js/models/answer.js" />
+      <root url="file://$PROJECT_DIR$/routes/lightSide.js" />
     </CLASSES>
     <SOURCES />
   </library>
