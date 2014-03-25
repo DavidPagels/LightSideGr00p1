@@ -1,7 +1,7 @@
 class window.prompt extends Backbone.Model
 
   defaults:
-    description: 'adsfasdf'
+    description: ''
 
   urlRoot: 'https://try-api.lightsidelabs.com/api/prompts/3'
 
@@ -10,12 +10,8 @@ class window.prompt extends Backbone.Model
       headers:
         Authorization: 'Token ' #dummy token
         'Content-Type': 'application/json'
-      method: 'get'}
-    Backbone.sync(method,model,options).done ->
-      console.log model.get('description')
-    model
+      method: 'post'}
     Backbone.sync(method,model,options)
-    console.log model.get('description')
 
 
   parse: (response, options) ->

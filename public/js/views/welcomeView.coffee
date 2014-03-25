@@ -8,7 +8,8 @@ class window.welcomeView extends Backbone.View
 
 
   initialize: ->
-    thePrompt = new prompt().fetch()
+    thePrompt = new prompt().fetch().done ->
+        $('#promptContents').html(thePrompt.responseJSON.text)
     @render()
     return
 
