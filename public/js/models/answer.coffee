@@ -1,10 +1,9 @@
 class window.answer extends Backbone.Model
-  urlRoot: '/postAnswer'
-  initialize: ->
-    console.log 'initializing an answer'
+  urlRoot: 'https://try-api.lightsidelabs.com/api'
 
   defaults:
     answerText: ''
+
   sync: (method,model,options) ->
     $.ajaxSetup {
       headers:

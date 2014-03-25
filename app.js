@@ -5,7 +5,7 @@ Module dependencies.
  */
 
 (function() {
-  var app, db, express, http, lightSide, mongoose, path, routes;
+  var app, db, express, http, mongoose, path, routes;
 
   express = require('express');
 
@@ -16,8 +16,6 @@ Module dependencies.
   path = require('path');
 
   mongoose = require('mongoose');
-
-  lightSide = require('./routes/lightSide');
 
   app = express();
 
@@ -73,8 +71,6 @@ Module dependencies.
   app.get("/csvPage", routes.csvPage);
 
   app.get("/users", routes.list);
-
-  app.get("/postAnswer", lightSide.postAnswer);
 
   http.createServer(app).listen(app.get("port"), function() {
     return console.log("Express server listening on port " + app.get("port"));
