@@ -1,17 +1,20 @@
 class window.answer extends Backbone.Model
-  urlRoot: 'https://try-api.lightsidelabs.com/api'
+  urlRoot: 'https://try-api.lightsidelabs.com/api/prediction-tasks/'
 
-  defaults:
-    answerText: ''
 
   sync: (method,model,options) ->
     $.ajaxSetup {
       headers:
-        Authorization: 'Token ' #dummy token
+        Authorization: 'Token '
         'Content-Type': 'application/json'
-      method: 'post'}
+      method: 'post'
+      data:
+        trained_model: 'https://try-api.lightsidelabs.com/api/trained-models/4'
+        answer_set: 'https://try-api.lightsidelabs.com/api/answer-sets/3'
+      }
     Backbone.sync(method,model,options)
 
 
   parse: (response, options) ->
     response
+

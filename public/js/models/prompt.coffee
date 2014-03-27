@@ -8,7 +8,7 @@ class window.prompt extends Backbone.Model
   sync: (method,model,options) ->
     $.ajaxSetup {
       headers:
-        Authorization: 'Token ' #dummy token
+        Authorization: 'Token '
         'Content-Type': 'application/json'
       method: 'post'}
     Backbone.sync(method,model,options)
