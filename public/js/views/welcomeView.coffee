@@ -20,13 +20,11 @@ class window.welcomeView extends Backbone.View
   submitEssay: ->
     $('#sandboxResults').show(1000);
     console.log 'in function' #currently not firing
-    postAnswer = new answer({answerText: $('#essayContents').val()})
-    console.log postAnswer.get('answerText')
-    postAnswer.save {},
-       success: ->
-         console.log 'answer posted!'
-       error: ->
-         console.log 'answer denied!'
+    postAnswer = new answer({text: $('#essayContents').val()})
+    console.log postAnswer.get('Text')
+    postAnswer.fetch().done ->
+      newTask = new predictionTask()
+      newTask.fetch()
     this
 
   hideResults: ->
