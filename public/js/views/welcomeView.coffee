@@ -9,10 +9,10 @@ class window.welcomeView extends Backbone.View
 
   initialize: ->
     thePrompt = new prompt().fetch().done ->
-        console.log(thePrompt.responseJSON)
+        #console.log(thePrompt.responseJSON)
         $('#promptContents').html(thePrompt.responseJSON.text)
-    theAnswer = new answer().fetch().done ->
-      console.log(theAnswer.responseJSON)
+#    theAnswer = new answer().fetch().done ->
+#      console.log(theAnswer.responseJSON)
     @render()
     return
 
@@ -24,7 +24,6 @@ class window.welcomeView extends Backbone.View
     $('#sandboxResults').show(1000);
     console.log 'in function' #currently not firing
     postAnswer = new answer({text: $('#essayContents').val()})
-    console.log postAnswer.get('Text')
     postAnswer.fetch().done ->
       newTask = new predictionTask()
       newTask.fetch()

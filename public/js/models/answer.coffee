@@ -1,20 +1,18 @@
 class window.answer extends Backbone.Model
   urlRoot: 'https://try-api.lightsidelabs.com/api/answers/'
 
-  defaults:
-    Text: ''
-
   sync: (method,model,options) ->
     $.ajaxSetup {
       data:
         author: "https://try-api.lightsidelabs.com/api/authors/1",
         prompt: 'https://try-api.lightsidelabs.com/api/prompts/3',
-        answer_set: "https://try-api.lightsidelabs.com/api/answer-sets/3"
+        "text": 'this is a test string'
       headers:
-        Authorization: 'Token ' #dummy token
+        Authorization: 'Token c35f045779a7564c55df0f7df7fedaf4346b3d40' #dummy token
         'Content-Type': 'application/json'
       method: 'post'}
-    Backbone.sync(method,model,options).done()
+    Backbone.sync(method,model,options).done ->
+      console.log model
 
 
 
