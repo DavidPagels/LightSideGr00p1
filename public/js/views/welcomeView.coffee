@@ -11,8 +11,7 @@ class window.welcomeView extends Backbone.View
     thePrompt = new prompt().fetch().done ->
         #console.log(thePrompt.responseJSON)
         $('#promptContents').html(thePrompt.responseJSON.text)
-#    theAnswer = new answer().fetch().done ->
-#      console.log(theAnswer.responseJSON)
+        theAuthor = new author({designator: "DavidP"}).fetch()
     @render()
     return
 
@@ -22,11 +21,10 @@ class window.welcomeView extends Backbone.View
 
   submitEssay: ->
     $('#sandboxResults').show(1000);
-    console.log 'in function' #currently not firing
-    postAnswer = new answer({text: $('#essayContents').val()})
-    postAnswer.fetch().done ->
-      newTask = new predictionTask()
-      newTask.fetch()
+    console.log 'in function'
+    postAnswer = new answer({text: "testing post of an answer", author: "https://try-api.lightsidelabs.com/api/authors/48", answer_set: 'https://try-api.lightsidelabs.com/api/answer-sets/3'}).save().done ->
+      newTask = new predictionTask({trained_model: "https://try-api.lightsidelabs.com/api/trained-models/4", answer_set: "https://try-api.lightsidelabs.com/api/answer-sets/3"}).save()
+      newTask.save()
     this
 
   hideResults: ->

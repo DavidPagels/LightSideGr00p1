@@ -4,13 +4,14 @@ class window.answer extends Backbone.Model
   sync: (method,model,options) ->
     $.ajaxSetup {
       data:
-        author: "https://try-api.lightsidelabs.com/api/authors/1",
-        prompt: 'https://try-api.lightsidelabs.com/api/prompts/3',
+        author: "https://try-api.lightsidelabs.com/api/authors/48",
+        answer_set: 'https://try-api.lightsidelabs.com/api/answer-sets/3',
         "text": 'this is a test string'
       headers:
-        Authorization: 'Token c35f045779a7564c55df0f7df7fedaf4346b3d40' #dummy token
+        Authorization: 'Token ' #dummy token
         'Content-Type': 'application/json'
-      method: 'post'}
+      type: 'POST'}
+    console.log 'before post call'
     Backbone.sync(method,model,options).done ->
       console.log model
 

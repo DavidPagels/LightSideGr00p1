@@ -5,9 +5,10 @@
         <item url="file://$PROJECT_DIR$/public/js/models/predictionTask.js" />
         <item url="file://$PROJECT_DIR$/public/js/models/prompt.js" />
         <item url="file://$PROJECT_DIR$/public/js/views/CSVView.js" />
-        <item url="file://$PROJECT_DIR$/public/js/views/resultsView.js" />
         <item url="file://$PROJECT_DIR$/app.js" />
+        <item url="file://$PROJECT_DIR$/public/js/views/resultsView.js" />
         <item url="file://$PROJECT_DIR$/public/js/app.js" />
+        <item url="file://$PROJECT_DIR$/public/js/models/author.js" />
         <item url="file://$PROJECT_DIR$/public/js/views/welcomeView.js" />
         <item url="file://$PROJECT_DIR$/public/js/models/answer.js" />
       </sourceFilesUrls>
@@ -17,10 +18,11 @@
       <root url="file://$PROJECT_DIR$/public/js/models/predictionTask.js" />
       <root url="file://$PROJECT_DIR$/public/js/models/prompt.js" />
       <root url="file://$PROJECT_DIR$/public/js/views/CSVView.js" />
-      <root url="file://$PROJECT_DIR$/app.js" />
       <root url="file://$PROJECT_DIR$/public/js/views/resultsView.js" />
+      <root url="file://$PROJECT_DIR$/app.js" />
       <root url="file://$PROJECT_DIR$/public/js/app.js" />
       <root url="file://$PROJECT_DIR$/public/js/views/welcomeView.js" />
+      <root url="file://$PROJECT_DIR$/public/js/models/author.js" />
       <root url="file://$PROJECT_DIR$/public/js/models/answer.js" />
     </CLASSES>
     <SOURCES />

@@ -1,18 +1,15 @@
-class window.prompt extends Backbone.Model
-
-  defaults:
-    description: ''
-
-  urlRoot: 'https://try-api.lightsidelabs.com/api/prompts/3'
+class window.author extends Backbone.Model
+  urlRoot: 'https://try-api.lightsidelabs.com/api/authors/'
 
   sync: (method,model,options) ->
     $.ajaxSetup {
       headers:
-        Authorization: 'Token '
+        Authorization: 'Token ' #dummy token
         'Content-Type': 'application/json'
-      method: 'post'}
+      type: 'POST'}
     Backbone.sync(method,model,options).done ->
       console.log model
+
 
 
   parse: (response, options) ->
