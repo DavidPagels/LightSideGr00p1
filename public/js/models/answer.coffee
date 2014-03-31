@@ -8,7 +8,7 @@ class window.answer extends Backbone.Model
         "answer_set": 'https://try-api.lightsidelabs.com/api/answer-sets/5',
         "text": 'this is a test string'
       headers:
-        Authorization: 'Token c35f045779a7564c55df0f7df7fedaf4346b3d40' #dummy token
+        Authorization: 'Token ' #dummy token
         'Content-Type': 'application/json'
       type: 'POST'}
     console.log options
