@@ -22,9 +22,7 @@ class window.welcomeView extends Backbone.View
   submitEssay: ->
     $('#sandboxResults').show(1000);
     console.log 'in function'
-    postAnswer = new answer({text: "testing post of an answer", author: "https://try-api.lightsidelabs.com/api/authors/48", answer_set: 'https://try-api.lightsidelabs.com/api/answer-sets/3'}).save().done ->
-      newTask = new predictionTask({trained_model: "https://try-api.lightsidelabs.com/api/trained-models/4", answer_set: "https://try-api.lightsidelabs.com/api/answer-sets/3"}).save()
-      newTask.save()
+    postAnswer = new answer({"author": "https://try-api.lightsidelabs.com/api/authors/48", "answer_set": 'https://try-api.lightsidelabs.com/api/answer-sets/3', "text": "test text"}).save()
     this
 
   hideResults: ->
